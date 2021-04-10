@@ -1,13 +1,3 @@
-# README
-* Ruby version
-* System dependencies
-* Configuration
-* Database creation
-* Database initialization
-* How to run the test suite
-* Services (job queues, cache servers, search engines, etc.)
-* Deployment instructions
-
 <!-- PROJECT SHIELDS -->
 <!--
 *** I'm using markdown "reference style" links for readability.
@@ -100,6 +90,14 @@
 
 - Ruby 3.0.0
 - Rails 6.1.3.1
+<!-- * System dependencies
+* Configuration
+* Database creation
+* Database initialization
+* How to run the test suite
+* Services (job queues, cache servers, search engines, etc.)
+* Deployment instructions -->
+
 
 To get a local copy up and running follow these simple steps.
 
