@@ -23,6 +23,8 @@ jobs: # our first job, named "build"
 
       - run:
           name: Database setup
-          command: bundle exec rails db:schema:load --trace
-      # Run rspec in parallel
+          command: rails db:{create, migrate}
+      - run:
+          name: test
+          command: rspec
       # - ruby/rspec-test
