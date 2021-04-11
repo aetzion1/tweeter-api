@@ -45,7 +45,9 @@ jobs: # our first job, named "build"
       - run:
           command: 'bundle exec rails db:schema:load --trace'
           name: Database setup
-      - ruby/rspec-test
+      - run:
+          name: test
+          command: rspec
 
 workflows:
   build_and_test:
