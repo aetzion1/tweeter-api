@@ -88,6 +88,7 @@ GEM
       activesupport (>= 4.2.0)
     i18n (1.8.10)
       concurrent-ruby (~> 1.0)
+    jwt (2.2.2)
     launchy (2.5.0)
       addressable (~> 2.7)
     listen (3.5.1)
@@ -220,6 +221,7 @@ DEPENDENCIES
   byebug
   capybara
   fast_jsonapi
+  jwt
   launchy
   listen (~> 3.3)
   pg (~> 1.1)

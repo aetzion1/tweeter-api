@@ -28,3 +28,5 @@
 
 # Ignore SimpleCov test coverage files
 /coverage
+
+/config/credentials/development.key
