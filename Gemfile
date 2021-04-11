@@ -39,11 +39,11 @@ group :development, :test do
   # Use rubocop for formatting
   gem 'rubocop', require: false
   gem 'rubocop-rails', require: false
-  gem 'graphiql-rails'
 end
 
 group :development do
   gem 'listen', '~> 3.3'
+  gem 'graphiql-rails'
 end
 
 group :test do
