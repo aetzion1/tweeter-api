@@ -28,6 +28,7 @@ gem 'bootsnap', '>= 1.4.4', require: false
 gem 'fast_jsonapi'
 # Use JSON Web Token gem
 gem 'jwt'
+gem 'rspec_junit_formatter'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
