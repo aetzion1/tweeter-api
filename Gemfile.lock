@@ -87,6 +87,10 @@ GEM
     ffi (1.15.0)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    graphiql-rails (1.7.0)
+      railties
+      sprockets-rails
+    graphql (1.12.7)
     i18n (1.8.10)
       concurrent-ruby (~> 1.0)
     jwt (2.2.2)
@@ -225,6 +229,8 @@ DEPENDENCIES
   byebug
   capybara
   fast_jsonapi
+  graphiql-rails
+  graphql (= 1.12.7)
   jwt
   launchy
   listen (~> 3.3)

@@ -29,6 +29,7 @@ gem 'fast_jsonapi'
 # Use JSON Web Token gem
 gem 'jwt'
 gem 'rspec_junit_formatter'
+gem 'graphql', '1.12.7'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -38,6 +39,7 @@ group :development, :test do
   # Use rubocop for formatting
   gem 'rubocop', require: false
   gem 'rubocop-rails', require: false
+  gem 'graphiql-rails'
 end
 
 group :development do
