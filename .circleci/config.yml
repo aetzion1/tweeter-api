@@ -1,0 +1,34 @@
+version: 2.1 # Use 2.1 to enable using orbs and other features.
+
+# Declare the orbs that we'll use in our config.
+# read more about orbs: https://circleci.com/docs/2.0/using-orbs/
+orbs:
+  ruby: circleci/ruby@1.1.2 
+
+jobs: # our first job, named "build"
+  build:
+    docker:
+      - image: circleci/ruby:3.0.0
+    executor: ruby/default
+    steps:
+      - checkout # pull down our git code.
+      - ruby/install-deps # use the ruby orb to install dependencies
+      # - run:
+      #     name: install bundler
+      #     command: gem install bundler        
+      # - run:
+      #     name: Which bundler?
+      #     command: bundler -v
+      # - ruby/bundle-install
+
+      - run:
+          name: Database setup
+          command: bundle exec rails db:schema:load --trace
+      # Run rspec in parallel
+      - ruby/rspec-test
+      
+      - run:
+          name: Database setup
+          command: bundle exec rails db:schema:load --trace
+      # Run rspec in parallel
+      - ruby/rspec-test
