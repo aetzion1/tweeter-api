@@ -24,14 +24,31 @@ gem 'bootsnap', '>= 1.4.4', require: false
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
+# Use fast_jsonapi gem for serialization(AE)
+gem 'fast_jsonapi'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  # Use pry for debugging
+  gem 'pry'
+  # Use rubocop for formatting
+  gem 'rubocop', require: false
+  gem 'rubocop-rails', require: false
 end
 
 group :development do
   gem 'listen', '~> 3.3'
+end
+
+group :test do
+  gem 'rspec-rails'
+  gem 'capybara'
+  gem 'launchy'
+  gem 'shoulda-matchers'
+  gem 'simplecov'
+  # gem 'factory_bot_rails'
+  # gem 'faker'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
