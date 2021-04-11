@@ -4,7 +4,6 @@
 # AuthorizationService grabs  access token in the Authorization HTTP Header
 #  and passes it to the JsonWebToken for verification.
 class AuthorizationService
-
   def initialize(headers = {})
     @headers = headers
   end
@@ -24,5 +23,4 @@ class AuthorizationService
   def verify_token
     JsonWebToken.verify(http_token)
   end
-
 end
