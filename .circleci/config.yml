@@ -23,7 +23,7 @@ jobs: # our first job, named "build"
   test:
     test:
     docker:
-      - image: 'cimg/ruby:3.0'
+      - image: 'cimg/ruby'
       - environment:
           POSTGRES_DB: tweeter_api_test
           POSTGRES_PASSWORD: ''
