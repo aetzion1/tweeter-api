@@ -43,7 +43,7 @@ jobs: # our first job, named "build"
           command: 'dockerize -wait tcp://localhost:5432 -timeout 1m'
           name: Wait for DB
       - run:
-          command: 'bundle exec rails db:schema:load --trace'
+          command: 'bundle exec rake db:schema:load --trace'
           name: Database setup
       - run:
           name: test
