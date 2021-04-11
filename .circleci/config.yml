@@ -12,14 +12,14 @@ jobs: # our first job, named "build"
     executor: ruby/default
     steps:
       - checkout # pull down our git code.
-      - ruby/install-deps # use the ruby orb to install dependencies
-      # - run:
-      #     name: install bundler
-      #     command: gem install bundler        
-      # - run:
-      #     name: Which bundler?
-      #     command: bundler -v
-      # - ruby/bundle-install
+      # - ruby/install-deps # use the ruby orb to install dependencies
+      - run:
+          name: install bundler
+          command: gem install bundler        
+      - run:
+          name: Which bundler?
+          command: bundler -v
+      - ruby/bundle-install
 
       - run:
           name: Database setup
