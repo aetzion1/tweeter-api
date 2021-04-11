@@ -14,7 +14,7 @@ gem 'puma', '~> 5.0'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
@@ -26,6 +26,9 @@ gem 'bootsnap', '>= 1.4.4', require: false
 # gem 'rack-cors'
 # Use fast_jsonapi gem for serialization(AE)
 gem 'fast_jsonapi'
+# Use JSON Web Token gem
+gem 'jwt'
+gem 'rspec_junit_formatter'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
