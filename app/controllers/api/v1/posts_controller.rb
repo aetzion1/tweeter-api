@@ -1,4 +1,4 @@
-class PostsController < SecuredController
+class Api::V1::PostsController < SecuredController
   skip_before_action :authorize_request, only: [:index, :show]
 
   def index
@@ -17,6 +17,11 @@ class PostsController < SecuredController
   def create
     post = Post.create!(post_params)
     render json: PostSerializer.new(post), status: :created
+  end
+
+  def by_user
+    posts = Post.where('user_id = ?', params[:id])
+    render json: PostSerializer.new(posts.sorted)
   end
 
   def destroy

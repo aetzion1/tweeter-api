@@ -7,7 +7,7 @@ RSpec.describe Post, type: :model do
 
   describe 'validations' do
     it {should validate_presence_of :text}
-    it {should validate_presence_of :user}
+    it {should validate_presence_of :user_id}
     it {should validate_presence_of :likes}
     it {should validate_presence_of :repost_count}
   end
