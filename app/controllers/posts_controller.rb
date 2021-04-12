@@ -16,7 +16,7 @@ class PostsController < SecuredController
 
   def create
     post = Post.create!(post_params)
-    render json: post, status: :created
+    render json: PostSerializer.new(post), status: :created
   end
 
   def destroy
@@ -28,6 +28,6 @@ class PostsController < SecuredController
   private
 
   def post_params
-    params.permit(:text, :user, :likes, :repost_count)
+    params.permit(:text, :user_id, :likes, :repost_count)
   end
 end
